@@ -24,4 +24,4 @@ def get_latest_record():
         time.sleep(30)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
